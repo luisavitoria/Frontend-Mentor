@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Single Price Grid Component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    /*meu codigo*/
+    @import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      background-color: hsl(204, 43%, 93%);
+      
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .conteudo {
+      display: grid;
+      width: auto;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto 1fr;
+      grid-template-areas: 'principal principal'
+      'col1 col2';
+      
+    }
+    
+    .principal {
+      grid-area: principal;
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 5px 5px 0 0 ;
+    }
+
+    .colunaEsquerda {
+      grid-area: col1;
+      background-color: hsl(179, 62%, 43%);
+      padding: 40px;
+      border-radius: 0 0 0 5px;
+    }
+
+    .colunaDireita {
+      grid-area: col2;
+      background-color: hsl(179, 59%, 47%);
+      padding: 40px;
+      border-radius: 0 0 5px 0;
+    }
+
+    footer {
+     margin-top: 20px;
+    }
+
+    h1{
+      font-family: 'Karla', sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+      margin-bottom: 30px;
+      /*color: hsl(218, 22%, 67%);*/
+      color: hsl(179, 62%, 43%);
+      
+    }
+
+    h2 {
+      font-family: 'Karla', sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      margin-bottom: 10px;
+      color: hsl(71, 73%, 54%);
+    }
+    
+    .principal p {
+      line-height: 1.5em;
+      color: hsl(218, 22%, 67%);
+    }
+
+    p {
+      font-family: 'Karla', sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+    }
+
+    .colunaEsquerda h2, .colunaDireita h2 {
+      color: #fff;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .colunaEsquerda p {
+      color: #fff;
+    }
+
+    #preco {
+      font-weight: 700;
+      font-size: 25px;
+    }
+
+    #porMes {
+      color: hsla(203, 44%, 93%, 0.541);
+      font-size: 14px;
+      margin-left: 10px;
+
+    }
+    #container2 {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    
+    .botao {
+      background-color:hsl(71, 73%, 54%);
+      color: #fff;
+      font-weight: 700;
+      width: 240px;
+      height: 50px;
+      margin-top: 25px;
+      border-radius: 5px;
+      border-style: none;
+      box-shadow: 1px 1px 1px 1px rgb(151, 150, 150);
+    }
+
+    .botao:hover {
+      background-color: hsl(218, 22%, 67%) ;
+    }
+    
+    ul {
+      list-style: none;
+    }
+
+    li{
+      color: hsla(201, 39%, 93%, 0.836);
+      font-family: 'Karla', sans-serif;
+      font-size: 13px;
+      padding-bottom: 5px;
+    }
+    
+    @media(max-width: 375px) {
+      .conteudo {
+        display: grid;
+        width: auto;
+        height: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: 
+        'principal'
+        "col1"
+        "col2" ;
+        margin: 20px;
+      }
+
+      .colunaEsquerda {
+        border-radius: 0;
+      }
+
+      .colunaDireita {
+        border-radius: 0 0 5px 5px;
+      }
+
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+  <div class="conteudo">
+    <main class="principal">
+      <h1>Join our community</h1>
+      <h2>30-day, hassle-free money back guarantee
+      </h2>
+      <p>Gain access to our full library of tutorials along with expert code reviews.</p>
+      <p>Perfect for any developers who are serious about honing their skills.</p>
+    </main>
+
+    <section class="colunaEsquerda">
+      <h2>Monthly Subscription</h2>
+      <p id="container2"><span id="preco">&dollar;29</span> <span id="porMes">per month</span></p>
+      <p>Full access for less than &dollar;1 a day</p>
+      <button class="botao">Sign Up</button>
+    </section>
+
+    <section class="colunaDireita">
+      <h2>Why Us</h2>
+      <ul>
+        <li>Tutorials by industry experts</li>
+        <li>Peer &amp; expert code review</li>
+        <li>Coding exercises</li>
+        <li>Access to our GitHub repos</li>
+        <li>Community forum</li>
+        <li>Flashcard decks</li>
+        <li>New videos every week</li>
+      </ul>
+    </section>
+  </div>
+
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Luísa Vitória</a>.
+    </p>
+  </footer>
+  </div>
+
+  
+</body>
+</html>
