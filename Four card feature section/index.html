@@ -22,6 +22,7 @@
 
     * {
       margin: 0;
+      padding: 0;
       box-sizing: border-box;
     }
 
@@ -53,7 +54,7 @@
 
     .container {
       display: grid;
-      grid-template-columns: 22em 22em 22em;
+      grid-template-columns: auto auto auto;
       grid-template-rows: auto auto;
       column-gap: 1.5em;
       row-gap: 1.5em;
@@ -139,7 +140,11 @@
       display: flex;
       flex-direction: column;
       row-gap: 1.5em;
+      align-items: center;
     }
+      .card {
+        max-width: fit-content;
+      }
   }
   </style>
 </head>
