@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Base Apparel coming soon page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    /*meu codigo*/
+    @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font: 20px 'Josefin Sans';
+      background-image: url(images/bg-pattern-desktop.svg);
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #conteudo {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 0 7em 0 5em;
+      height: 100vh;
+      position: relative;
+    }
+
+    #logo {
+      position: absolute;
+      top: 0;
+    }
+
+   
+
+    #linha1 {
+      color: hsl(0, 36%, 70%);
+      font-weight: 100;
+      font-size: 2.5em;
+      letter-spacing: 0.2em;
+    }
+
+    h1 {
+      color: hsl(0, 6%, 24%);
+      font-size: 2.5em;
+      letter-spacing: 0.2em;
+    }
+
+    p {
+      color: hsl(0, 36%, 70%);
+      line-height: 1.5em;
+    }
+
+    #email {
+      margin-top: 2em;
+      width: 380px;
+      height: 40px;
+      
+      border-style: none;
+      border-radius: 25px;
+      border: 1px solid hsl(0, 36%, 70%);
+    }
+
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <section id="conteudo">
+      <div id="logo"><img src="images/logo.svg" alt=""></div>
+      <div id="texto">
+        <h1 id="linha1">WE'RE</h1>
+        <h1>COMING</h1>
+        <h1>SOON</h1>
+        <p>Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.</p>
+      </div>
+      <div>
+        <input type="email" name="email" id="email" placeholder="      Email Address"> 
+        <img src="images/icon-arrow.svg" alt="icone-arrow">
+      </div>
+    </section>
+    <section id="fotografia">
+      <img src="images/hero-desktop.jpg" alt="">
+    </section>
+  </div>
+ 
+
+  
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </p>
+  </footer>
+</body>
+</html>
