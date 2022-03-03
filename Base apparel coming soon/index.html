@@ -15,7 +15,6 @@
 
     /*meu codigo*/
     @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap');
 
     * {
       margin: 0;
@@ -26,6 +25,7 @@
     body {
       font: 20px 'Josefin Sans';
       background-image: url(images/bg-pattern-desktop.svg);
+      height: 100vh;
     }
 
     .container {
@@ -45,10 +45,8 @@
 
     #logo {
       position: absolute;
-      top: 0;
+      top: 5px;
     }
-
-   
 
     #linha1 {
       color: hsl(0, 36%, 70%);
@@ -66,48 +64,182 @@
     p {
       color: hsl(0, 36%, 70%);
       line-height: 1.5em;
+      margin-top: 1em;
+    }
+
+    #registro {
+      display: block;
+      width: 100%;
+      position: relative;
+      margin-top: 2em;
     }
 
     #email {
-      margin-top: 2em;
-      width: 380px;
+      width: 100%;
       height: 40px;
-      
       border-style: none;
       border-radius: 25px;
       border: 1px solid hsl(0, 36%, 70%);
+      padding-left: 20px;
+    }
+    
+    #email::placeholder {
+      color: hsl(0, 36%, 70%);
     }
 
+    #email:focus, #botao:focus {
+      outline: none;
+    }
+
+    #botao{
+      padding: 8px 30px;
+      border: none;
+      border-radius: 25px;
+      background-image: linear-gradient(135deg,hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+      position: absolute;
+      right: 0;
+      cursor: pointer;
+    }
+
+    #botao:hover {
+      background-image: linear-gradient(135deg, hsl(0, 57%, 86%), hsl(0, 79%, 91%));
+      box-shadow: 0 0.5em 1em rgba(0,0,0,0.15);
+    }
+
+    #icone-erro {
+      display: inline-block;
+      position: absolute;
+      right: 100px;
+      top: 8px;
+      display: none;
+    }
+
+    .mensagem-erro {
+      margin-top: 10px;
+      padding-left: 20px;
+      font-size: 1rem;
+      color: hsl(0, 93%, 68%);
+      display: none;
+    }
+
+    .erro #icone-erro {
+      display: block;
+    }
+
+    .erro .mensagem-erro {
+      display: block;
+    }
+
+    .erro #email {
+      border: 1px solid hsl(0, 93%, 68%);
+      background-color: none;
+    }
+
+    #fotografia-desktop {
+      display: block;
+      
+    }
+
+    #fotografia-mobile {
+      display: none;
+    }
+
+    @media (max-width: 800px) {
+      body {
+        background-color: hsl(0, 83%, 95%) ;
+        background-image: none;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+      }
+
+      #conteudo {
+        position: static;
+        margin: 0;
+        height: 70vh;
+        text-align: center;
+        padding: 0 20px;
+      }
+
+      #fotografia-mobile {
+        display: block;
+        width: 100%;
+        padding-top: 80px;
+        margin: 0 auto;
+      }
+
+      #fotografia-mobile img{
+        width: 100%;
+      }
+
+      #fotografia-desktop {
+        display: none;
+      }
+
+    }
 
   </style>
 </head>
+
 <body>
   <div class="container">
+
+    <section id="fotografia-mobile">
+      <img src="images/hero-mobile.jpg" alt="">
+    </section>
+
     <section id="conteudo">
       <div id="logo"><img src="images/logo.svg" alt=""></div>
+
       <div id="texto">
         <h1 id="linha1">WE'RE</h1>
         <h1>COMING</h1>
         <h1>SOON</h1>
         <p>Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.</p>
       </div>
-      <div>
-        <input type="email" name="email" id="email" placeholder="      Email Address"> 
-        <img src="images/icon-arrow.svg" alt="icone-arrow">
-      </div>
+
+      <form id="registro" action="#">
+        <input type="email" name="email" id="email" placeholder="  Email Address">
+        <img id="icone-erro" src="images/icon-error.svg" alt="">
+        <button type="submit" name="botao-enviar" id="botao"><img  src="images/icon-arrow.svg" alt="icone-arrow"></button>
+        <p class="mensagem-erro">Please provide a valid email</p>
+      </form>
     </section>
-    <section id="fotografia">
+    
+    <section id="fotografia-desktop">
       <img src="images/hero-desktop.jpg" alt="">
     </section>
   </div>
  
-
-  
   <footer>
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by <a href="#">Luísa Vitória</a>.
     </p>
   </footer>
+
+  <script type="text/javascript">
+    const email = document.querySelector('#email')
+    const form = document.querySelector("#registro")
+
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      let emailValue = email.value
+      if(validateEmail(emailValue)) {
+        form.classList.remove('erro')
+      }else {
+        form.classList.add('erro')
+      }
+    })
+
+    function validateEmail(email) {
+    return String(email)
+    .toLowerCase()
+    .match(
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    );};
+  </script>
+
 </body>
 </html>
