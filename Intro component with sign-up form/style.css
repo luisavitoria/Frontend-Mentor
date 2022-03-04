@@ -1,0 +1,214 @@
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    @import url('https://fonts.google.com/specimen/Poppins');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      font-size: 62.5%;
+    }
+
+    body {
+      font-size: 1.6rem;
+      font-family: 'Poppins', sans-serif;
+      color: #fff;
+      background-image: url('images/bg-intro-desktop.png');
+      background-color: hsl(0, 100%, 74%)  ;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-template-rows: 0.2fr 0.8fr;
+      margin: 8rem;
+    }
+
+    .conteudo {
+      grid-column: 1/2;
+      grid-row: 1/3;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-left: 5rem;
+      padding: 3rem;
+    }
+
+    .conteudo h1 {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+    }
+
+    .conteudo p {
+      line-height: 2.2rem;
+    }
+
+    .try-it {
+      max-width: 50rem;
+      grid-column: 2/3;
+      grid-row: 1/2;
+      padding: 2rem;
+      margin-bottom: 1.5rem;
+      margin-left: 5rem;
+      background-color: hsl(248, 32%, 49%);
+      border-radius: 8px;
+      box-shadow: 0 8px rgba(0,0,0,0.2);
+      text-align: center;
+    }
+
+    .try-it span {
+      font-weight: 600;
+    }
+
+    .formulario {
+      max-width: 50rem;
+      grid-column: 2/3;
+      grid-row: 2/3;
+      background-color: #fff;
+      padding: 2.5rem;
+      border-radius: 8px;
+      box-shadow: 0 8px rgba(0,0,0,0.2);
+      margin-left: 5rem;
+    }
+
+    .formulario form {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      position: relative;
+    }
+
+    .formulario form div {
+      position: relative;
+    }
+
+    .formulario form input {
+      margin-bottom: 1rem;
+      padding: 1.5rem 2rem;
+      border: none;
+      border: 1px solid hsl(246, 25%, 77%) ;
+      border-radius: 5px;
+      color: hsl(249, 10%, 26%);
+      font-weight: 700;
+      width: 100%;
+      
+    }
+
+    .formulario form input::placeholder {
+      color: hsla(249, 10%, 26%, 0.644);
+      font-weight: 600;
+    }
+
+    .formulario form input:focus {
+      outline: none;
+      border: 1px solid hsl(248, 32%, 49%);
+      color: hsl(249, 10%, 26%);
+      font-weight: 700;
+    }
+
+    #botao {
+      margin-bottom: 1.5rem;
+      padding: 1.5rem 2rem;
+      border: none;
+      border-radius: 5px;
+      box-shadow: 0 3px hsla(154, 69%, 45%, 0.815);
+      background-color: hsl(154, 59%, 51%);
+      color: #fff;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    #botao:hover {
+      opacity: 0.7;
+    }
+
+    .formulario form p {
+      font-size: 0.8rem;
+      font-weight: 400;
+      text-align: center;
+      color: hsl(246, 25%, 77%);
+    }
+
+    .formulario form p span {
+      color: hsl(0, 100%, 74%);
+      font-weight: 700;
+    }
+
+    .formulario form #icone-erro {
+      position: absolute;
+      width: 2rem;
+      top: 1.2rem;
+      right: 2rem;
+      display: none;
+    }
+
+    .formulario form .mensagem-erro p{
+      padding-bottom: 1.5rem;
+      font-size: 1rem;
+      color: hsl(0, 100%, 74%);
+      text-align: end;
+      font-style: italic;
+     display: none;
+    }
+
+    .formulario form .erro .mensagem-erro p {
+      display: block;
+    }
+
+    .formulario form .erro #icone-erro {
+      display: block;
+    }
+
+    .formulario form .erro input {
+      border: 1px solid hsl(0, 100%, 74%);
+    }
+
+    .formulario form .erro input::placeholder {
+      color: hsl(0, 100%, 74%);
+    }
+
+@media (max-width: 800px) {
+    body {
+        margin: 0;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+
+    .conteudo {
+        padding: 0;
+        margin: 5rem 1rem;
+        text-align: center;
+        width: 80%;
+    }
+
+    .conteudo h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+    }
+    .try-it {
+        margin: 0 1rem 1rem 1rem;
+        width: 80%;
+    }
+
+    .formulario {
+        margin: 1rem 1rem 2rem 1rem;
+        width: 80%;
+    } 
+       
+
+
+    .formulario form {
+       
+        
+    }
+}
+   

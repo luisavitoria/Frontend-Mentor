@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+
+  
+  <title>Frontend Mentor | Intro component with sign up form</title>
+</head>
+<body>
+  <div class="container">
+    <section class="conteudo">
+      <h1>Learn to code by watching others</h1>
+      <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable.</p>
+    </section>
+
+    <section class="try-it">
+      <p><span>Try it free 7 days</span> then $20/mo. thereafter</p>
+    </section>
+
+    <section class="formulario">
+      <form action="" name="formulario" id="form">
+
+        <div class="class-firstName">
+          <input type="text" name="firstName" id="firstName" placeholder="First Name ">
+          <img id="icone-erro" src="images/icon-error.svg" alt="">
+          <div class="mensagem-erro"><p>First Name cannot be empty</p></div>
+        </div>
+
+        <div class="class-lastName">
+          <input type="text" name="lastName" id="lastName" placeholder="Last Name">
+          <img id="icone-erro" src="images/icon-error.svg" alt="">
+          <div class="mensagem-erro"><p>Last Name cannot be empty</p></div>
+        </div>
+
+        <div class="class-email">
+          <input type="email" name="email" id="email" placeholder="Email Address">
+          <img id="icone-erro" src="images/icon-error.svg" alt="">
+          <div class="mensagem-erro"><p>Looks like this is not an email</p></div>
+        </div>
+
+        <div class="class-password">
+          <input type="text" name="password" id="password" placeholder="Password">
+          <img id="icone-erro" src="images/icon-error.svg" alt="">
+          <div class="mensagem-erro"><p>Password cannot be empty</p></div>
+        </div>
+
+        <button type="submit" id="botao">Claim your free trial </button>
+
+        <p>By clicking the button, you are agreeing to our <span>Terms and Services</span></p>
+      </form>
+    </section>
+  </div>
+  
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Luísa Vitória</a>.
+    </p>
+  </footer>
+  <script type="text/javascript" src="javascript-file.js"></script>
+</body>
+</html>
