@@ -1,0 +1,151 @@
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@import url('https://fonts.google.com/specimen/Kumbh+Sans');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(hsl(273, 75%, 66%),hsl(240, 73%, 65%));
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 12px;
+}
+
+#box {
+  position: absolute;
+  top: 35vh;
+  left: 111px;
+  z-index: 1;
+  
+}
+
+.container {
+  background-color: #fff;
+  background-size: 50%;
+  width: 70%;
+  min-height: 80%;
+  display: flex;
+  align-items: center;
+  padding: 40px 40px 0 0;
+  border-radius: 20px;
+  
+}
+
+.container-imagem {
+  position: relative;
+  overflow: hidden;
+  background-image: url('images/bg-pattern-desktop.svg');
+  background-size: 120%;
+  background-position: -180px;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+#ilustracao {
+  position: relative;
+  left: -85px;
+  width: 100%;
+}
+
+#ilustracao-mobile {
+  display: none;
+}
+
+#faq {
+  width: 50%;
+  text-align: left;
+  color: hsl(238, 29%, 16%);
+  padding-right: 50px;
+  height: 100%;
+}
+
+#faq h1 {
+  margin: 10px 0 15px 0
+}
+
+#faq .questoes {
+  padding: 20px 10px 10px 0;
+  position: relative;
+}
+
+#faq .questoes .linha1 {
+  margin-bottom: 10px;
+}
+
+#faq .questoes .linha2 {
+  display: none;
+}
+
+#botao {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+}
+
+#botao #icone-arrow {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+#botao:hover {
+  color: hsl(14, 88%, 65%);
+}
+
+@media (max-width: 500px) {
+  body {
+    height: initial;
+  }
+
+  #box {
+    display: none;
+  }
+
+  #ilustracao {
+    display: none;
+  }
+
+  #ilustracao-mobile {
+    display: block;
+    position: absolute;
+    top: 20px;
+    width: 50%;
+    left: 25vw;
+  }
+
+  .container {
+    margin-top: 110px;
+    width: 90%;
+    padding: 60px 0;
+    display: block;
+  }
+
+  .container-imagem {
+    display: none;
+  }
+
+  #faq {
+    width: 80%;
+    padding: 0;
+    margin:  auto;
+    
+  }
+
+  #faq h1 {
+    text-align: center;
+  }
+  
+}
