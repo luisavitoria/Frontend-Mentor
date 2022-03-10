@@ -1,0 +1,143 @@
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@import url('https://fonts.google.com/specimen/Barlow');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 18px;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 600;
+    
+}
+
+.secao-inicio{
+    background-image: url('images/desktop/image-header.jpg');
+    background-size: 100%;
+    height: 750px;
+    background-repeat: no-repeat;
+}
+
+#cabecalho {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+#logo {
+    margin: 30px;
+}
+
+.menu-cabecalho{
+   margin: 30px;
+   margin-right: 40px;
+   display: flex;
+}
+
+.menu-background {
+    margin-left: 20px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    color: #fff;
+    font-family: "Barlow", sans-serif;
+}
+
+.menu-cabecalho a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.menu-background:hover {
+    background-color: rgb(255, 255, 255, 0.2);
+    text-transform: uppercase;
+    font-family: 'Fraunces', serif;
+    font-weight: 800;
+}
+
+#principal {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+}
+
+#principal h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 5px;
+    text-align: center;
+}
+
+#principal img {
+    width: 3%;
+    padding-top: 130px;
+}
+
+.secao-amarela {
+    display: flex;
+    height: 600px;
+}
+
+.secao-amarela .texto {
+    padding: 110px;
+    margin: auto;
+    width: 50%;
+}
+
+.secao-amarela .texto h2 {
+    font-family: 'Fraunces', serif;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: hsl(212, 27%, 19%);
+}
+
+.secao-amarela .texto p {
+    line-height: 1.7em;
+    color: hsl(232, 10%, 55%);
+}
+
+.botao-background {
+    width: fit-content;
+    position: relative;
+}
+
+.secao-amarela .linha-sobrescrita {
+    width: 100%;
+    height: 5px;
+    position: absolute;
+    bottom: 3px;
+    left: 0;
+    z-index: -1;
+    background-color: yellow;
+    opacity: 0.3;
+}
+
+.botao-learn-more {
+    border-style: none;
+    background-color: transparent;
+    text-transform: uppercase;
+    font-family: 'Fraunces', serif;
+    font-weight: 800;
+    color: hsl(212, 27%, 19%);
+    cursor: pointer;
+    position: relative;
+    margin-top: 30px;
+    padding: 0 5px;
+}
+
+.secao-amarela .imagem {
+    width: 50%;
+}
+
+
+
+
